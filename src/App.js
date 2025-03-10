@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import EventsPage from './pages/EventsPage';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <header className="header">
+          <div className="logo">
+            <Link to="/">Communion</Link>
+          </div>
+          <nav className="nav">
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/events">Events</Link></li>
+              <li><Link to="/">About</Link></li>
+            </ul>
+          </nav>
+        </header>
+        
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/events" element={<EventsPage />} />
+          </Routes>
+        </main>
+        
+        <footer className="footer">
+          <p>&copy; 2025 Communion App. All rights reserved.</p>
+        </footer>
+      </div>
+    </Router>
   );
 }
 
