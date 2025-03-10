@@ -2,6 +2,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+    transition: transform 0.3s ease;
   }
   
   .hero-section {
@@ -14,16 +15,20 @@
     text-align: center;
     border-radius: 8px;
     margin: 2rem 0;
+    transition: opacity 0.3s ease;
   }
   
   .hero-content {
     max-width: 800px;
     padding: 2rem;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
   }
   
   .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    transition: color 0.3s ease;
   }
   
   .hero-content p {
@@ -39,7 +44,7 @@
     border-radius: 50px;
     font-weight: bold;
     text-decoration: none;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
   }
   
   .cta-button:hover {
@@ -53,6 +58,8 @@
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
   }
   
   .intro-section h2 {
@@ -65,4 +72,8 @@
     margin-bottom: 1.5rem;
   }
   
- 
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  

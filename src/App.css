@@ -3,12 +3,14 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   background-color: #f9f9f9;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .header {
@@ -17,7 +19,12 @@ body {
   align-items: center;
   padding: 1rem 2rem;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.header:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .logo a {
@@ -25,6 +32,11 @@ body {
   font-weight: bold;
   color: #5c6bc0;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #3f4cbb;
 }
 
 .nav ul {
@@ -49,13 +61,14 @@ body {
   color: #5c6bc0;
 }
 
-main {
-  flex: 1;
-}
-
-.footer {
+footer {
   background-color: #f2f2f2;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+footer:hover {
+  background-color: #e6e6e6;
 }

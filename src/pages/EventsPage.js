@@ -1,6 +1,6 @@
 // pages/EventsPage.jsx
 import React, { useState } from 'react';
-import EventList from '../components/EventList';
+import EventList from '../components/EventsList';
 import EventFilter from '../components/EventFilter';
 import AddEventForm from '../components/AddEventForm';
 import './EventsPage.css';

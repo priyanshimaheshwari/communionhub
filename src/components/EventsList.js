@@ -1,5 +1,5 @@
 import React from 'react';
-import './EventList.css';
+import './EventsList.css';
 
 function EventList({ events }) {
   if (events.length === 0) {
